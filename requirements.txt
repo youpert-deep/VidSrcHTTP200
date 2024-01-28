@@ -1,0 +1,3 @@
+pymongo
+ssh_pymongo
+requests
