@@ -51,7 +51,7 @@ def update_movie(moviedb):
 def update_episode(moviedb):
     try:
         all_titles = moviedb.find({"category": "series", "can_embed": 1}, allow_disk_use=True,
-                                  no_cursor_timeout=True, batch_size=2).sort([("release_date", -1)])
+                                  no_cursor_timeout=True, batch_size=2).sort([("releaseDate", -1)])
     except Exception as error:
         logging.error(f'Error fetching data from db: {error}')
         return
